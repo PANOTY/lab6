@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int n, sum = 0;
+    printf("Enter number :\n");
+    scanf("%d", &n);
+
+    // ใช้ตัวแปรเพื่อเก็บค่าที่จะพิมพ์
+    int currentNumber = 0;
+    printf("Series = ");
+
+    // ใช้ for loop เพื่อสร้างชุดอนุกรม
+    for (int i = 1; i <= n; i++) {
+        currentNumber = currentNumber * 10 + 9; // สร้างตัวเลข 9, 99, 999, ...
+        if (i == n) {
+            // สำหรับตัวสุดท้าย ไม่ต้องใส่เครื่องหมาย +
+            printf("%d", currentNumber);
+        } else {
+            printf("%d + ", currentNumber);
+        }
+        sum += currentNumber; // คำนวณผลรวม
+    }
+
+    printf("\nSum = %d\n", sum);
+    return 0;
+}
