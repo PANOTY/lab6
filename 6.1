@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int lines;
+
+    // รับค่าจำนวนบรรทัดจากผู้ใช้
+    printf("Enter number of lines:\n");
+    scanf("%d", &lines);
+
+    // ใช้ For Loop เพื่อพิมพ์ "Hello World" ตามจำนวนบรรทัดที่กำหนด
+    for (int i = 1; i <= lines; i++) {
+        if (lines % 2 == 0) { // ถ้าเลขคู่
+            printf("(%d) Hello World\n", i);
+        } else { // ถ้าเลขคี่
+            printf("[%d] Hello World\n", i);
+        }
+    }
+
+    return 0;
+}
