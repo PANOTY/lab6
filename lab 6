@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+
+    // รับค่าจากผู้ใช้
+    printf("Enter value:\n");
+    scanf("%d", &N);
+
+    // ตรวจสอบว่า N เป็นเลขคี่หรือเลขคู่
+    if (N % 2 != 0) { // ถ้าเป็นเลขคี่
+        printf("Series: ");
+        for (int i = 1; i <= N; i += 2) {
+            printf("%d ", i);
+        }
+    } else { // ถ้าเป็นเลขคู่
+        printf("Series: ");
+        for (int i = N; i >= 0; i -= 2) {
+            printf("%d ", i);
+        }
+    }
+
+    printf("\n"); // แสดงบรรทัดใหม่หลังจากแสดงผล
+    return 0;
+}
